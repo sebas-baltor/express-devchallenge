@@ -1,0 +1,34 @@
+<%- include("templates/header")%>
+   
+    <div class="container">
+        <div>
+            <input type="button" value="< Back" class="text-primary border-0 bg-transparent" onclick="history.back()">
+        </div>
+        <div class="border rounded p-3 col-6 mx-auto">
+            <div class="row">
+                <h4>Change info</h4>
+                <p>Changes will be reflected to every services</p>
+            </div>
+            <form action="" >
+                <div class="mb-3">
+                    <label for="img" class="position-relative">
+                        <img style="width:3rem; height:3rem;" class="rounded overflow-hidden " src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="user">
+                        <span class="position-absolute top-50 start-50 text-white translate-middle text-opacity-75"><i class="fa-solid fa-camera"></i></span>
+                    </label>
+                    <input type="file" name="image" id="img" accept="image/png, image/jpeg">
+                </div>
+                <label class="form-label" id="name" name="name">Name</label>
+                <input type="text" class="form-control mb-3" id="name">
+                <label class="form-label" for="bio" name="bio">Bio</label>
+                <textarea class="form-control mb-3" id="bio"></textarea>
+                <label class="form-label" for="phone" name="phone">Phone</label>
+                <input type="text" class="form-control mb-3" id="phone">
+                <label class="form-label" for="email" name="email">Email</label>
+                <input type="email" class="form-control mb-3" id="email">
+                <label class="form-label" for="password" name="password">Password</label>
+                <input type="password" class="form-control mb-3" id="password">
+                <input type="submit" value="Save" class="btn btn-primary">
+            </form>
+        </div>
+    </div>        
+<%- include("templates/footer")%>

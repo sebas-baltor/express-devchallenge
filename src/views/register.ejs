@@ -1,0 +1,71 @@
+<%- include('./templates/header') %>
+
+    <div class="container d-flex align-items-center" style="height: 100vh;">
+        <div class="mx-auto rounded border p-4 col-4 col-sm-12 col-md-6">
+            <div class="mb-4">
+                <h1 class="h4 mb-2">Join thousan of lernes from around the world.</h1>
+                <p >Master web development by making real-life projects. There are multiple path to choose.</p>
+            </div>
+            <form id="registerForm" action="/register" method="post">
+                <div class="form-text text-danger"><%=error%></div>
+                <label class="form-label" for="input-name">Name</label>
+                <input type="text" id="input-name" class="form-control" placeholder="name" name="name" required>
+                <label class="form-label" for="input-email">Email</label>
+                <input id="input-email" type="email" class="form-control" placeholder="email" name="email" required>
+                <label class="form-label" for="input-password">Password</label>
+                <input type="password" id="input-password" class="form-control" placeholder="password" name="password" required>
+                <button type="submit" class="btn btn-primary mt-3 w-100">Start coding now</button>
+            </form>
+            <div class="mt-4">
+                <p class="mb-4 text-center">or continue with these social profile</p>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-center">already a member? <a href="/login" class="text-primary">login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        const registerForm = document.getElementById("registerForm");
+        registerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("input-name").value;
+            const email = document.getElementById("input-email").value;
+            const password = document.getElementById("input-password").value;
+            const data = {
+                name,
+                email,
+                password
+            }
+            fetch("/register",{
+                method: "POST",
+                Headers: {
+                    "Content-Type": "application/json"
+                },
+                body:data
+            }).then(res => res.json()).then(data => console.log(data)).catch(err => console.error(err));
+        })
+    </script> -->
+    <%- include('./templates/footer') %>

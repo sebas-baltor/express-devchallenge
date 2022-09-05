@@ -1,0 +1,46 @@
+<%- include('./templates/header') %>
+
+    <div class="container d-flex align-items-center">
+        <div class="mx-auto rounded border p-4 col-4 col-sm-12 col-md-6">
+            <h1 class="h4 mb-4">login</h1>
+            <form action="/login" method="POST">
+                <div class="form-text text-danger"><%=error%></div>
+
+                <label class="form-label" for="input-email">Email</label>
+                <input id="input-email " type="email" class="form-control" placeholder="email" name="email">
+                <label class="form-label" for="input-password" >Password</label>
+                <input type="password" id="input-password" class="form-control" placeholder="password" name="password">
+                <button type="submit" class="btn btn-primary mt-3 w-100">login</button>
+            </form>
+            <div class="mt-4">
+                <p class="mb-4 text-center">or continue with these social profile</p>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary">
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-center">Don't have an accout yet? <a href="/register" class="text-primary">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./templates/footer') %>
